@@ -17,7 +17,7 @@ echo
 
 # Finding domain through assetfinder.
 echo "[!]Now running assestfinder..."
-assetfinder  "$domain"  > assetfinder.txt
+assetfinder -subs-only "$domain"  > assetfinder.txt
 echo "[!]Finished - "
 echo
 
