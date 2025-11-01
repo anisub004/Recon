@@ -28,11 +28,13 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 _Make sure $GOPATH/bin is added to your system PATH._
 
 ****Usage****
+```
+chmod +x subhunt.sh
 
 bash subhunt.sh
 
 [!] Enter domain name: example.com
-
+```
 
 🧑‍💻 Author
 
