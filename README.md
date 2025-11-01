@@ -31,6 +31,7 @@ You can install them using:
 sudo apt install subfinder findomain
 
 go install github.com/tomnomnom/assetfinder@latest
+
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
 
