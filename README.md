@@ -29,6 +29,8 @@ _Make sure $GOPATH/bin is added to your system PATH._
 
 ****Usage****
 ```
+git clone https://github.com/Researcher1anish/Recon.git
+
 chmod +x subhunt.sh
 
 bash subhunt.sh
