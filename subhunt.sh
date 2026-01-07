@@ -9,21 +9,25 @@ echo " ____        _     _                 _
 read -rp "[!]Enter domain name:" domain
 
 echo "[!]You entered:$domain"
+
 echo
 
 # Finding domain through subfider.
-subfinder -d "$domain" -o subfinder.txt
+subfinder -d "$domain"  -all -o subfinder.txt
+
 echo
 
 # Finding domain through assetfinder.
 echo "[!]Now running assestfinder..."
 assetfinder -subs-only "$domain"  > assetfinder.txt
 echo "[!]Finished - "
+
 echo
 
 # Finding domain through findomain.
 echo "[!]Now running findomain..."
 findomain -t "$domain" -u findomain.txt
+
 echo
 
 # Sorting out the found subdomains.
@@ -34,9 +38,9 @@ echo
 
 # Checking for the live hosts.
 echo "[!]Now checking for the live domains through httpx"
-cat all_subdomain.txt | httpx -silent -status-code -title -location -o live_domains.txt
+cat all_subdomain.txt | httpx -silent  -status-code -title -location -o live_domains.txt
 echo
 echo "[!]Results saved in live_domains.txt"
 echo
-
+rm assetfinder.txt findomain.txt subfinder.txt 
 echo "GOOD LUCK!"
